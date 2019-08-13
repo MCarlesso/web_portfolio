@@ -1,1 +1,146 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+GLOBAL STYLES
+*/
+// Colours
+@primary-red: #ce1433;
+@primary-black: #000000;
+@primary-white: #ffffff; //Fonts
+@font-face {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+body,
+html {
+  margin: 0;
+  width: 100%;
+  font-family: 'IBM Plex Mono';
+  font-weight: semi-bold;
+}
+
+html {
+  background-color: @primary-black;
+  color: @primary-white;
+}
+
+.container {
+  padding: 1em;
+  max-width: 750px;
+  min-height: 100vh;
+  width: 90%;
+  margin: 0% 10% 0%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+// Menu
+
+.menu {
+  ul {
+    position: fixed;
+    float: right;
+    right: 5%;
+    display: inline-block;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    text-align: center;
+    padding: 0px 30px;
+    color: @primary-white;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    // TODO
+  }
+
+  span {
+      display: inline-block;
+  }
+
+  .logo {
+      padding: 10px 0px 0px;
+      width: 200px;
+      display: inline-block;
+  }
+}
+menu {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-family: 'IBM Plex Sans';
+    font-weight: bold;
+}
+/*
+HOME
+*/
+h1 {
+  font-size: 100px;
+}
+// Social Links
+
+.social {
+  ul {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    float: right;
+    right: 5%;
+  }
+
+  ul li {
+    padding: 20px;
+  }
+
+  li a {
+    text-align: center;
+    color: @primary-white;
+    text-decoration: none;
+  }
+
+  fa-icon {
+    font-size: 14px;
+  }
+}
+
+/*Typing Animated Title*/
+.typing {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing {
+     animation: animated-text 1s steps(6,end) 1s 1 normal both, animated-cursor 600ms steps(6,end) infinite;
+}
+// text animation
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 360px;
+  }
+}
+// cursor animations
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0,255,0,.75);
+    border-right-width: thick;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
